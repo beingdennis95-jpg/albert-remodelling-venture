@@ -50,7 +50,7 @@
         <a href="packages.html">Packages</a>
         <a href="gallery.html">Gallery</a>
       </nav>
-      <a class="header-cta" href="mailto:support@albertventuredesign.com?subject=30-Minute%20Growth%20Audit">Book Audit</a>
+      <a class="header-cta" href="#virtual-consultation">Book Consultation</a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-label="Open navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -78,7 +78,7 @@
             We build the websites, ads, and automation that help remodeling companies win better projects — before the first call.
           </p>
           <div class="hero-actions reveal">
-            <a class="btn btn-primary" href="mailto:support@albertventuredesign.com?subject=30-Minute%20Growth%20Audit">Book a Free 30-Min Audit</a>
+            <a class="btn btn-primary" href="#virtual-consultation">Book a Virtual Consultation</a>
             <a class="btn btn-secondary" href="mailto:support@albertventuredesign.com">support@albertventuredesign.com</a>
           </div>
           <div class="trust-line reveal" aria-label="Core services">
@@ -358,9 +358,161 @@
               <h3>Not Sure Which Remodel Level Fits Your Client?</h3>
               <p>Use a virtual consultation to map the client's problem, budget, timeline, and best-fit remodeling path before the project conversation starts.</p>
             </div>
-            <a class="btn btn-primary" href="https://albert-remodelling-venture.vercel.app">Book a Virtual Consultation</a>
+            <a class="btn btn-primary" href="#virtual-consultation">Book a Virtual Consultation</a>
           </div>
 
+        </div>
+      </section>
+
+      <!-- VIRTUAL CONSULTATION FORM -->
+      <section id="virtual-consultation" class="consult-section section-pad">
+        <div class="container">
+          <div class="section-heading wide reveal">
+            <p class="eyebrow">Virtual Consultation</p>
+            <h2>Book a Virtual Remodeling Growth Consultation.</h2>
+            <p>Tell us about your remodeling business, current lead flow, project type, budget range, and timeline. We'll help map the right growth system before the first serious client conversation.</p>
+          </div>
+          <div class="consult-grid">
+
+            <div class="consult-left reveal">
+              <p class="consult-review-title">What We'll Review on the Call</p>
+              <ul class="consult-review-list">
+                <li>Your current website and inquiry flow</li>
+                <li>Your project gallery and trust presentation</li>
+                <li>Your lead quality and follow-up process</li>
+                <li>Your reviews, ads, and CRM setup</li>
+                <li>Your Standard, Deluxe, or Luxury remodeling offer structure</li>
+                <li>Where better clients may be dropping off before they inquire</li>
+              </ul>
+              <div class="consult-best-for">
+                <p class="consult-review-title">Best For</p>
+                <p>Remodeling companies that want better inquiries, stronger project presentation, faster follow-up, and a clearer consultation path.</p>
+              </div>
+            </div>
+
+            <div class="consult-form-card reveal">
+              <h3 class="form-title">Project Fit Form</h3>
+              <form id="consultation-form" novalidate>
+                <input type="hidden" name="_subject" value="New Virtual Consultation Request — Albert Remodelling Venture" />
+                <input type="hidden" name="_captcha" value="false" />
+                <div class="form-grid">
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="fc-name">Full Name</label>
+                      <input class="form-input" type="text" id="fc-name" name="full_name" placeholder="Jane Smith" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="fc-email">Email Address</label>
+                      <input class="form-input" type="email" id="fc-email" name="email" placeholder="jane@company.com" required />
+                    </div>
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="fc-phone">Phone Number</label>
+                      <input class="form-input" type="tel" id="fc-phone" name="phone" placeholder="+1 (555) 000-0000" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="fc-company">Company Name</label>
+                      <input class="form-input" type="text" id="fc-company" name="company" placeholder="Smith Remodeling" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="fc-website">Website URL</label>
+                    <input class="form-input" type="url" id="fc-website" name="website" placeholder="https://yourcompany.com" />
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="fc-type">Business Type</label>
+                      <select class="form-select" id="fc-type" name="business_type">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Kitchen Remodeling</option>
+                        <option>Bathroom Remodeling</option>
+                        <option>Full Home Renovation</option>
+                        <option>Basement Remodeling</option>
+                        <option>Design-Build Firm</option>
+                        <option>General Remodeling Contractor</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="fc-problem">Biggest Growth Problem</label>
+                      <select class="form-select" id="fc-problem" name="growth_problem">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Outdated Website</option>
+                        <option>Slow Follow-Up</option>
+                        <option>Weak Reviews</option>
+                        <option>No Project Gallery</option>
+                        <option>Poor Lead Quality</option>
+                        <option>Ads Not Converting</option>
+                        <option>No CRM / Disorganized Pipeline</option>
+                        <option>Referral-Only Growth</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="fc-level">Remodel Level to Promote</label>
+                      <select class="form-select" id="fc-level" name="remodel_level">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Standard Remodel</option>
+                        <option>Deluxe Remodel</option>
+                        <option>Luxury Remodel</option>
+                        <option>Not Sure Yet</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="fc-budget">Average Project Budget</label>
+                      <select class="form-select" id="fc-budget" name="avg_budget">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Under $10k</option>
+                        <option>$10k–$25k</option>
+                        <option>$25k–$50k</option>
+                        <option>$50k–$100k</option>
+                        <option>$100k+</option>
+                        <option>Varies by project</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" for="fc-timeline">Timeline</label>
+                      <select class="form-select" id="fc-timeline" name="timeline">
+                        <option value="" disabled selected>Select one</option>
+                        <option>ASAP</option>
+                        <option>Within 30 Days</option>
+                        <option>60–90 Days</option>
+                        <option>This Quarter</option>
+                        <option>Just Exploring</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="fc-consult">Preferred Consultation Type</label>
+                      <select class="form-select" id="fc-consult" name="consult_type">
+                        <option value="" disabled selected>Select one</option>
+                        <option>Google Meet</option>
+                        <option>Zoom</option>
+                        <option>Phone Call</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="fc-message">Message</label>
+                    <textarea class="form-textarea" id="fc-message" name="message" rows="3" placeholder="Tell us what you want to improve first."></textarea>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-submit" type="submit">Book My Virtual Consultation</button>
+                <p class="form-note">No pressure. We'll review your current growth system and show what to fix first.</p>
+              </form>
+              <div class="form-success" id="form-success" role="alert" aria-live="polite">
+                <div class="form-success-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3>Request Received</h3>
+                <p>Thanks — your consultation request has been received. We'll review your details and follow up shortly.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -521,11 +673,11 @@
       <!-- FINAL CTA -->
       <section class="final-cta section-pad section-orange">
         <div class="container narrow reveal">
-          <p class="eyebrow">Free Growth Audit</p>
-          <h2>See What's Costing You Better Projects.</h2>
-          <p>30 minutes. No pitch. We show you what to fix first.</p>
+          <p class="eyebrow">Virtual Consultation</p>
+          <h2>Ready to Turn Remodeling Interest Into Qualified Consultations?</h2>
+          <p>Use the virtual consultation form to show us your current website, project type, budget range, timeline, and biggest growth bottleneck.</p>
           <div class="hero-actions">
-            <a class="btn btn-dark" href="mailto:support@albertventuredesign.com?subject=30-Minute%20Growth%20Audit">Book a Free 30-Min Audit</a>
+            <a class="btn btn-dark" href="#virtual-consultation">Book My Virtual Consultation</a>
             <a class="btn btn-ghost-dark" href="mailto:support@albertventuredesign.com">support@albertventuredesign.com</a>
           </div>
         </div>

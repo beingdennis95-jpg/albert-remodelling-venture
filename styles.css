@@ -800,6 +800,229 @@ p {
   line-height: 1.5;
 }
 
+/* ── Virtual Consultation Form ──────────────────────────────────── */
+
+.consult-section {
+  background:
+    radial-gradient(circle at 18% 60%, rgba(255, 105, 8, 0.06), transparent 38%),
+    #070707;
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(36px, 6vw, 68px);
+  align-items: start;
+}
+
+.consult-left {
+  position: sticky;
+  top: 110px;
+}
+
+.consult-review-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 0 18px;
+}
+
+.consult-review-list {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+
+.consult-review-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.87rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.consult-review-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: 0.46em;
+  border-radius: 999px;
+  background: var(--orange);
+  box-shadow: 0 0 6px rgba(255, 105, 8, 0.5);
+}
+
+.consult-best-for {
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 105, 8, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 105, 8, 0.05);
+}
+
+.consult-best-for .consult-review-title {
+  margin-bottom: 8px;
+  color: var(--orange-2);
+}
+
+.consult-best-for p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Form card */
+.consult-form-card {
+  border: 1px solid rgba(255, 105, 8, 0.35);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(165deg, rgba(255, 105, 8, 0.07), rgba(255, 255, 255, 0.02)),
+    #0e0b09;
+  box-shadow: 0 0 60px rgba(255, 105, 8, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.form-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 22px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.form-label {
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 105, 8, 0.14);
+  outline: none;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='rgba(255,105,8,0.7)' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: #1a1410;
+  color: #fff;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.form-note {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.73rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 28px;
+  text-align: center;
+}
+
+.form-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 105, 8, 0.4);
+  border-radius: 999px;
+  background: rgba(255, 105, 8, 0.1);
+}
+
+.form-success-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--orange);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.form-success h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.form-success p {
+  max-width: 340px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.65;
+}
+
 /* ── Project Strategy / Tier Comparison ─────────────────────────── */
 
 .strategy-section {
@@ -1576,6 +1799,18 @@ p {
 
   .strategy-cta-copy p {
     max-width: 100%;
+  }
+
+  .consult-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-left {
+    position: static;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
   }
 }
 

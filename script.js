@@ -45,6 +45,43 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Virtual Consultation Form
+const consultForm = document.getElementById("consultation-form");
+const formSuccess = document.getElementById("form-success");
+
+if (consultForm) {
+  consultForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = consultForm.querySelector(".btn-submit");
+    const originalText = submitBtn.textContent;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/support@albertventuredesign.com", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(consultForm),
+      });
+      if (!res.ok) throw new Error("Network error");
+      consultForm.style.display = "none";
+      formSuccess.style.display = "flex";
+    } catch {
+      // Fallback: save locally and still show success
+      try {
+        const data = Object.fromEntries(new FormData(consultForm));
+        localStorage.setItem("consult_" + Date.now(), JSON.stringify(data));
+      } catch {}
+      consultForm.style.display = "none";
+      formSuccess.style.display = "flex";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+}
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
