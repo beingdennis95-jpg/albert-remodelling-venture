@@ -1,0 +1,12 @@
+# QA screenshots (development artifacts)
+qa-*.png
+
+# Archives
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
