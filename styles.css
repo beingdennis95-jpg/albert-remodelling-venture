@@ -800,6 +800,280 @@ p {
   line-height: 1.5;
 }
 
+/* ── Project Strategy / Tier Comparison ─────────────────────────── */
+
+.strategy-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 105, 8, 0.07), transparent 44%),
+    #080808;
+}
+
+.tier-scale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.tier-scale-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.tier-scale-node::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 105, 8, 0.35);
+  flex-shrink: 0;
+}
+
+.tier-scale-node.mid {
+  border-color: rgba(255, 105, 8, 0.22);
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.tier-scale-node.mid::before {
+  background: rgba(255, 105, 8, 0.65);
+  width: 9px;
+  height: 9px;
+}
+
+.tier-scale-node.top {
+  border-color: rgba(255, 105, 8, 0.44);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tier-scale-node.top::before {
+  background: var(--orange);
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 8px rgba(255, 105, 8, 0.55);
+}
+
+.tier-scale-arrow {
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.8rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.tier-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    #0c0a08;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.tier-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 105, 8, 0.32);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.tier-card.tier-featured {
+  border-color: rgba(255, 105, 8, 0.44);
+  background:
+    linear-gradient(165deg, rgba(255, 105, 8, 0.1), rgba(255, 255, 255, 0.025)),
+    #100d0a;
+  box-shadow: 0 0 50px rgba(255, 105, 8, 0.1);
+}
+
+.tier-card.tier-featured:hover {
+  box-shadow: 0 0 60px rgba(255, 105, 8, 0.18);
+}
+
+.tier-card.tier-luxury {
+  border-color: rgba(217, 165, 90, 0.32);
+  background:
+    linear-gradient(165deg, rgba(217, 165, 90, 0.07), rgba(255, 255, 255, 0.02)),
+    #0e0c09;
+}
+
+.tier-card.tier-luxury:hover {
+  border-color: rgba(217, 165, 90, 0.52);
+  box-shadow: 0 0 44px rgba(217, 165, 90, 0.1);
+}
+
+.tier-head {
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tier-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  font-size: 0.63rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.tier-card:not(.tier-featured):not(.tier-luxury) .tier-badge {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tier-featured .tier-badge {
+  background: rgba(255, 105, 8, 0.14);
+  border: 1px solid rgba(255, 105, 8, 0.3);
+  color: var(--orange-2);
+}
+
+.tier-luxury .tier-badge {
+  background: rgba(217, 165, 90, 0.12);
+  border: 1px solid rgba(217, 165, 90, 0.3);
+  color: var(--gold);
+}
+
+.tier-head h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.tier-best-for {
+  font-size: 0.77rem;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tier-meta {
+  display: flex;
+  gap: 18px;
+  padding: 11px 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tier-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.tier-meta-item svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--orange-2);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.tier-luxury .tier-meta-item svg {
+  stroke: var(--gold);
+}
+
+.tier-body {
+  padding: 20px 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.tier-row {
+  display: grid;
+  gap: 4px;
+}
+
+.tier-row-label {
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange-2);
+}
+
+.tier-luxury .tier-row-label {
+  color: var(--gold);
+}
+
+.tier-row p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.56);
+  line-height: 1.58;
+  margin: 0;
+}
+
+.tier-outcome {
+  padding: 11px 14px;
+  border-radius: 6px;
+  border-left: 2px solid var(--orange);
+  background: rgba(255, 105, 8, 0.06);
+}
+
+.tier-luxury .tier-outcome {
+  border-left-color: var(--gold);
+  background: rgba(217, 165, 90, 0.05);
+}
+
+.tier-outcome p {
+  font-size: 0.79rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+  margin: 0;
+}
+
+.strategy-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 48px;
+  padding: 36px 40px;
+  border: 1px solid rgba(255, 105, 8, 0.24);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 80% 50%, rgba(255, 105, 8, 0.09), transparent 44%),
+    rgba(255, 255, 255, 0.02);
+}
+
+.strategy-cta-copy h3 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.strategy-cta-copy p {
+  max-width: 540px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────────────────────────── */
+
 /* Metrics / numbers band */
 .metrics-grid {
   display: grid;
@@ -1224,6 +1498,20 @@ p {
   .metric:nth-child(2) {
     border-bottom: 1px solid var(--line);
   }
+
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 24px;
+  }
+
+  .strategy-cta-copy p {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 820px) {
@@ -1378,6 +1666,21 @@ p {
   .mini-grid,
   .pain-grid.five {
     grid-template-columns: 1fr;
+  }
+
+  .tier-scale-arrow {
+    display: none;
+  }
+
+  .tier-head,
+  .tier-meta,
+  .tier-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .strategy-cta {
+    padding: 24px 18px;
   }
 
   .metrics-grid {
