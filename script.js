@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const revealItems = document.querySelectorAll(".reveal");
+const beforeAfterSliders = document.querySelectorAll("[data-before-after]");
 
 function setHeaderState() {
   header.classList.toggle("is-scrolled", window.scrollY > 18);
@@ -45,6 +46,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+beforeAfterSliders.forEach((slider) => {
+  const range = slider.querySelector("[data-before-range]");
+  const beforeWrap = slider.querySelector("[data-before-wrap]");
+  const handle = slider.querySelector("[data-before-handle]");
+
+  if (!range || !beforeWrap || !handle) return;
+
+  function setPosition(value) {
+    const position = Number(value);
+    beforeWrap.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
+    handle.style.left = `${position}%`;
+  }
+
+  setPosition(range.value);
+  range.addEventListener("input", () => setPosition(range.value));
+});
+
 // Virtual Consultation Form
 const consultForm = document.getElementById("consultation-form");
 const formSuccess = document.getElementById("form-success");
@@ -56,7 +74,7 @@ if (consultForm) {
     const originalText = submitBtn.textContent;
 
     submitBtn.disabled = true;
-    submitBtn.textContent = "Sending…";
+    submitBtn.textContent = "Sending...";
 
     try {
       const res = await fetch("https://formsubmit.co/ajax/support@albertventuredesign.com", {
